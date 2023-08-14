@@ -14,7 +14,7 @@ import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class yandexTranslateResultsTest extends TestBase {
+public class YandexTranslateResultsTest extends TestBase {
 
     @BeforeEach
     void beforeEach() {
@@ -44,7 +44,7 @@ public class yandexTranslateResultsTest extends TestBase {
         );
     }
 
-    @MethodSource
+    @MethodSource("yaTranslateNavigationLocaleTest")
     @DisplayName("Язык навигации страницы меняется при смене локали")
     @ParameterizedTest(name = "Навигация с локализацией {0} содержит значения {1}")
     void yaTranslateNavigationLocaleTest(String locale, List<String> navValue) {
